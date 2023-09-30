@@ -1,0 +1,7 @@
+env/
+dependencies/
+build.sh
+utils/
+main.py
+
+.streamlit/
