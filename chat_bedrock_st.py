@@ -28,7 +28,7 @@ def load_llm():
     llm = Bedrock(client=bedrock_runtime, model_id="anthropic.claude-v2")
     llm.model_kwargs = {"temperature": 0.7, "max_tokens_to_sample": 2048}
 
-    DEFAULT_TEMPLATE = """{history}\n\nHuman: Answer in proper markdown format only. {input}\n\nAssistant:"""
+    DEFAULT_TEMPLATE = """{history}\n\nHuman: {input}\n\nAssistant:"""
     prompt = PromptTemplate(
         input_variables=["history", "input"],
         template=DEFAULT_TEMPLATE
