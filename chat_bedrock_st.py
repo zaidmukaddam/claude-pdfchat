@@ -10,6 +10,9 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts.prompt import PromptTemplate
 
 
+with open("styles.css") as css:
+    st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
+
 st.title("Chat with PDF by Claude on Bedrock")
 st.markdown(
     "**Chat with Claude v2 on Bedrock. Get started by uploading a PDF!**"
