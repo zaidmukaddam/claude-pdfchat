@@ -2,6 +2,10 @@ FROM python:3.9-slim
 
 COPY . /app
 
+# Copy a start script to the image that will handle the PORT
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
@@ -13,4 +17,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["streamlit", "run", "chat_bedrock_st.py", "--server.address=0.0.0.0"]
+ENTRYPOINT ["/start.sh"]

@@ -3,3 +3,5 @@ dependencies/
 build.sh
 utils/
 main.py
+
+.streamlit/secrets.toml

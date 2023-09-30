@@ -10,16 +10,14 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts.prompt import PromptTemplate
 
 
-
 st.title("Chat with PDF by Claude on Bedrock")
 st.markdown(
     "**Chat with Claude v2 on Bedrock. Get started by uploading a PDF!**"
-    )
+)
 
 bedrock_runtime = boto3.client(
     service_name="bedrock-runtime",
     region_name="us-east-1",
-    
 )
 
 
@@ -73,16 +71,15 @@ if pdf is not None:
     )
     chunks = text_splitter.split_text(text=text)
 
-    # Chunk to one string
     pdf_text = ""
     for chunk in chunks:
         pdf_text += chunk + "\n\n"
- 
+
 if prompt := st.chat_input("What is up?", disabled=not pdf):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-    
+
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
@@ -99,4 +96,5 @@ if prompt := st.chat_input("What is up?", disabled=not pdf):
             message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(result)
 
-    st.session_state.messages.append({"role": "assistant", "content": full_response})
+    st.session_state.messages.append(
+        {"role": "assistant", "content": full_response})
