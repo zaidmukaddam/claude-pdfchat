@@ -11,7 +11,7 @@ from langchain.prompts.prompt import PromptTemplate
 
 
 
-st.title("Chat with PDF with Claude on Bedrock")
+st.title("Chat with PDF by Claude on Bedrock")
 st.markdown(
     "**Chat with Claude v2 on Bedrock. Get started by uploading a PDF!**"
     )
