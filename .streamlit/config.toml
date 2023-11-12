@@ -1,5 +1,5 @@
 [theme]
-primaryColor="#5644a0"
-backgroundColor="#efede6"
-secondaryBackgroundColor="#dad4c6"
-textColor="#000000"
+primaryColor="#8A2BE2"  # A deep purple, rich and elegant
+backgroundColor="#0F111A"  # Almost black, very dark for the main background
+secondaryBackgroundColor="#1C1E2A"  # A slightly lighter shade of dark for areas that need to stand out
+textColor="#E6E6E6"  # A light grey that contrasts well against the dark backgrounds for readability

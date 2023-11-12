@@ -5,3 +5,6 @@ faiss-cpu>=1.7,<2
 langchain==0.0.304
 PyPDF2
 streamlit
+anthropic-bedrock
+replicate
+openai
