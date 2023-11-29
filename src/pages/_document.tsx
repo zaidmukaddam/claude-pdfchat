@@ -7,6 +7,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script async src="https://cdn.splitbee.io/sb.js" />
       </body>
     </Html>
   );
